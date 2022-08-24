@@ -30,7 +30,7 @@ class RegisterController extends Controller
 
     public function createRegister()
     {
-        return view('register page');
+        return view('Bnker/html/ltr/register');
     }
 
 

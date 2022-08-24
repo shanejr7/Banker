@@ -25,7 +25,7 @@ class PortalController extends Controller
 
     public function createRegister()
     {
-        return view('path/registration');
+        return view('Bnker/html/ltr/register');
     }
 
     /**
@@ -35,9 +35,8 @@ class PortalController extends Controller
      */
     public function createLogin()
     {
-        return view('path/login');
+        return view('Bnker/html/ltr/login');
     }
-
 
 
     /**

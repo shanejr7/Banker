@@ -18,7 +18,7 @@ use App\Http\Controllers\SessionController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Bnker/html/ltr/index');
 })->middleware('guest');
 
 
@@ -46,3 +46,8 @@ Route::get('/adminClients',[PortalController::class,'viewClients'])->name('admin
 Route::get('/dashboard', [PortalController::class,'createDashboard']);
 Route::get('/account', [PortalController::class,'createAccount']);
 Route::get('/ClientPortal', [PortalController::class,'createClientPortal']);
+
+
+Route::get('Bnker/html/ltr/404.html', function(){
+   return abort(404);
+});

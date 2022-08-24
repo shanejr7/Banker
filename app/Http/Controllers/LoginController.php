@@ -29,7 +29,7 @@ class LoginController extends Controller
 
     public function createLogin()
     {
-        return view('login page');
+        return view('Bnker/html/ltr/login');
     }
     /**
      * log validated user to dashboard.
