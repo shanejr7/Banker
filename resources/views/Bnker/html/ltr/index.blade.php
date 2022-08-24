@@ -51,7 +51,7 @@
             <div class="container">
                 <div class="acavo-responsive-menu">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="assets/images/logo.png" alt="logo">
                         </a>
                     </div>
@@ -63,7 +63,7 @@
             <!-- Container -->
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         <img src="assets/images/logo.png" alt="logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu">
@@ -72,7 +72,7 @@
                          <!--    <li class="nav-item"><a href="#" class="nav-link active">Home <i
                                         class='las la-angle-down'></i></a> -->
                              <!--    <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="index.html" class="nav-link active">Home 1</a></li>
+                                    <li class="nav-item"><a href="/" class="nav-link active">Home 1</a></li>
                                     <li class="nav-item"><a href="index-2.html" class="nav-link">Home 2</a></li>
                                     <li class="nav-item"><a href="index-3.html" class="nav-link">Home 3</a></li>
                                 </ul> -->
@@ -80,7 +80,7 @@
                             <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
                                             <li class="nav-item"><a href="/registration" class="nav-link">Register</a></li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">About Us </a>
+                            <li class="nav-item"><a href="/about-us" class="nav-link">About Us </a>
                       <!--       <li class="nav-item"><a href="#" class="nav-link">About Us <i
                                         class='las la-angle-down'></i></a> -->
                               <!--   <ul class="dropdown-menu">
@@ -142,12 +142,12 @@
                             </li> -->
                         </ul>
                         <div class="others-option d-flex align-items-center">
-                            <div class="option-item">
+                          <!--   <div class="option-item">
                                 <form class="search-box">
                                     <input type="text" class="input-search" placeholder="Search for anything">
                                     <button type="submit"><i class="uil uil-search-alt"></i></button>
                                 </form>
-                            </div>
+                            </div> -->
                             <div class="option-item">
                                 <a href="/registration" class="btn theme-btn-1">Get
                                     Started <i class="las la-angle-right"></i></a>
@@ -172,12 +172,12 @@
                 <div class="container">
                     <div class="option-inner">
                         <div class="others-option">
-                            <div class="option-item">
+                            <!-- <div class="option-item">
                                 <form class="search-box">
                                     <input type="text" class="input-search" placeholder="Search for anything">
                                     <button type="submit"><i class="flaticon-loupe"></i></button>
                                 </form>
-                            </div>
+                            </div> -->
 
                             <div class="option-item">
                                 <a href="/registration" class="btn theme-btn-1"><i class="las la-angle-right"></i>Get
@@ -330,7 +330,7 @@
                         <p>You are your personal bank, track your lending, track your loan. Make your own terms. Here at Banker we put banking power in your hands.</p>
 
                         <div class="about-btn justify-content-center text-center">
-                            <a href="#" class="btn theme-btn-1">
+                            <a href="/registration" class="btn theme-btn-1">
                                 Learn More
                             </a>
                         </div>
@@ -345,7 +345,7 @@
     <!-- /About Us -->
 
     <!-- /Services -->
-    <div class="services-area">
+       <div class="services-area pt-120 pb-70">
         <!-- Container -->
         <div class="container">
             <!-- row -->
@@ -364,108 +364,107 @@
                 <!-- /col -->
             </div>
             <!-- /row -->
-
             <!-- row -->
             <div class="row">
-                <!-- col  -->
+                <!-- col -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-services-item">
+                    <div class="single-services">
                         <div class="image">
                             <a href="#">
                                 <img src="assets/images/services/01.png" alt="image">
                             </a>
                         </div>
-                        <div class="content">
-                            <h3>
-                                <a href="#">Personal Loan</a>
-                            </h3>
-                            <!-- <span>Lorem ipsum</span> -->
-                        </div>
+                        <h3>
+                            <a href="#">Personal Loan</a>
+                        </h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incutu labore
+                            et dolore magna aliqua.</p> -->
+                       <!--  <a href="#" class="services-btn">Read More <i class="las la-angle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-services-item">
+                    <div class="single-services">
                         <div class="image">
                             <a href="#">
                                 <img src="assets/images/services/02.png" alt="image">
                             </a>
                         </div>
-                        <div class="content">
-                            <h3>
-                                <a href="#">Business Loan</a>
-                            </h3>
-                            <!-- <span>Lorem ipsum</span> -->
-                        </div>
+                        <h3>
+                            <a href="#">Business Loan</a>
+                        </h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incutu labore
+                            et dolore magna aliqua.</p> -->
+                       <!--  <a href="#" class="services-btn">Read More <i class="las la-angle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-services-item">
+                    <div class="single-services">
                         <div class="image">
                             <a href="#">
                                 <img src="assets/images/services/03.png" alt="image">
                             </a>
                         </div>
-                        <div class="content">
-                            <h3>
-                                <a href="#">Education Loan</a>
-                            </h3>
-                            <!-- <span>Lorem ipsum</span> -->
-                        </div>
+                        <h3>
+                            <a href="#">Education Loan</a>
+                        </h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incutu labore
+                            et dolore magna aliqua.</p> -->
+                       <!--  <a href="#" class="services-btn">Read More <i class="las la-angle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-services-item">
+                    <div class="single-services">
                         <div class="image">
                             <a href="#">
                                 <img src="assets/images/services/04.png" alt="image">
                             </a>
                         </div>
-                        <div class="content">
-                            <h3>
-                                <a href="#">Loan Tracker</a>
-                            </h3>
-                            <!-- <span>Lorem ipsum</span> -->
-                        </div>
+                        <h3>
+                            <a href="#">Mobile Banking</a>
+                        </h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incutu labore
+                            et dolore magna aliqua.</p> -->
+                       <!--  <a href="#" class="services-btn">Read More <i class="las la-angle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-services-item">
+                    <div class="single-services">
                         <div class="image">
                             <a href="#">
                                 <img src="assets/images/services/05.png" alt="image">
                             </a>
                         </div>
-                        <div class="content">
-                            <h3>
-                                <a href="#">Credit Card</a>
-                            </h3>
-                            <!-- <span>Lorem ipsum</span> -->
-                        </div>
+                        <h3>
+                            <a href="#">Credit Card</a>
+                        </h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incutu labore
+                            et dolore magna aliqua.</p> -->
+                       <!--  <a href="#" class="services-btn">Read More <i class="las la-angle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-services-item">
+                    <div class="single-services">
                         <div class="image">
                             <a href="#">
                                 <img src="assets/images/services/06.png" alt="image">
                             </a>
                         </div>
-                        <div class="content">
-                            <h3>
-                                <a href="#">Online Payment</a>
-                            </h3>
-                            <!-- <span>Lorem ipsum</span> -->
-                        </div>
+                        <h3>
+                            <a href="#">Online Payment</a>
+                        </h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incutu labore
+                            et dolore magna aliqua.</p> -->
+                       <!--  <a href="#" class="services-btn">Read More <i class="las la-angle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- /col -->
@@ -994,7 +993,7 @@
                 <!-- col -->
                 <div class="col-xl-3 col-lg-3 col-md-4">
                     <div class="footer-logo">
-                        <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                        <a href="/"><img src="assets/images/logo.png" alt=""></a>
                     </div>
                 </div>
                 <!-- /col -->
@@ -1040,11 +1039,11 @@
                             <h3 class="footer-title">Services</h3>
                             <div class="footer-link">
                                 <ul>
-                                    <li><a href="about.html">Conditions</a></li>
-                                    <li><a href="our-history.html">Terms of Use</a></li>
-                                    <li><a href="about.html">Our Services</a></li>
-                                    <li><a href="team.html">New Guests List</a></li>
-                                    <li><a href="about.html">The Team List</a></li>
+                                    <li><a href="#">Conditions</a></li>
+                                    <li><a href="#">Terms of Use</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">New Guests List</a></li>
+                                    <li><a href="#">The Team List</a></li>
                                 </ul>
                             </div>
                             <div></div>
@@ -1057,11 +1056,11 @@
                             <h3 class="footer-title">Useful Links</h3>
                             <div class="footer-link">
                                 <ul>
-                                    <li><a href="services-01.html">Conditions</a></li>
-                                    <li><a href="contact.html">Terms of Use</a></li>
-                                    <li><a href="contact.html">Our Services</a></li>
-                                    <li><a href="blog.html">New Guests List</a></li>
-                                    <li><a href="about.html">The Team List</a></li>
+                                    <li><a href="#">Conditions</a></li>
+                                    <li><a href="#">Terms of Use</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">New Guests List</a></li>
+                                    <li><a href="#">The Team List</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1093,7 +1092,7 @@
                     <!-- col -->
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="copyright">
-                            <p>© Copyrights 2021 <a href="index.html">Bnker.</a> All rights reserved.</p>
+                            <p>© Copyrights 2021 <a href="/">Bnker.</a> All rights reserved.</p>
                         </div>
                     </div>
                     <!-- col -->

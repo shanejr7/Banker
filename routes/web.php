@@ -21,7 +21,9 @@ Route::get('/', function () {
     return view('Bnker/html/ltr/index');
 })->middleware('guest');
 
-
+Route::get('/about-us', function () {
+    return view('Bnker/html/ltr/about-us');
+})->middleware('guest');
 
 // AUTHENTICATE USER LOG REQUEST & DASHBOARD ROUTE
 Route::get('/login', [LoginController::class,'createLogin']);
