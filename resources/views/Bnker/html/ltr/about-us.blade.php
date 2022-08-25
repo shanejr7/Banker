@@ -905,7 +905,7 @@
                                 <form>
 
                                     <div class="message"></div> 
-                                    <input name="email" id="getemail" class="getemail" placeholder="Enter email " type="email">
+                                    <input name="email_3" class="getemail" placeholder="Enter email " type="email">
                                 </form>
                                     <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
                                             class="lab la-telegram-plane me-2"></i>subscribe</button>
@@ -978,7 +978,25 @@
     <!-- /Main JS -->
 
     <!-- /JS -->
-    <script src="assets/js/custom_ajax.js"></script>
+    <script >
+         $(".post_subscribe_button").click(function(event){
+      event.preventDefault();
+      let email = $("input[name=email_3]").val();
+      let _token   = $('meta[name="csrf-token"]').attr('content');
+
+      $.ajax({
+        url: "/subscribe",
+        type:"POST",
+        data:{
+          email:email,
+          _token: _token
+        },
+           success:function(data){
+                $('.message').text(data.message); 
+           }
+       });
+  });
+    </script>
 
 </body>
 

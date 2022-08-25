@@ -9,7 +9,7 @@
     <!-- /Required meta tags -->
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <!-- /Favicon -->
 
     <!-- All CSS -->
@@ -1099,14 +1099,15 @@
                     </div>
                     <!-- /col -->
                     <!-- col -->
-                     <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="footer-wrapper mb-30">
                             <h3 class="footer-title">Subscribe</h3>
                             <div class="subscribes-form">
                                 <div>
                                 <form>
+
                                     <div class="message"></div> 
-                                    <input name="email" id="getemail" class="getemail" placeholder="Enter email " type="email">
+                                    <input name="email_1" class="getemail" placeholder="Enter email " type="email">
                                 </form>
                                     <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
                                             class="lab la-telegram-plane me-2"></i>subscribe</button>
@@ -1180,7 +1181,25 @@
 
     <!-- /JS -->
 
-    <script src="assets/js/custom_ajax.js"></script>
+    <script >
+         $(".post_subscribe_button").click(function(event){
+      event.preventDefault();
+      let email = $("input[name=email_1]").val();
+      let _token   = $('meta[name="csrf-token"]').attr('content');
+
+      $.ajax({
+        url: "/subscribe",
+        type:"POST",
+        data:{
+          email:email,
+          _token: _token
+        },
+           success:function(data){
+                $('.message').text(data.message); 
+           }
+       });
+  });
+    </script>
 
 </body>
 
