@@ -18,7 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'is_admin',
+        'username',
+        'first_name',
+        'middle_name',
+        'last_name',
+        'suffix',
         'email',
         'password',
     ];
@@ -31,7 +36,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-        'is_admin',
     ];
 
     /**
@@ -42,4 +46,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /**
+     * the attribute that should be hashed.
+     *
+     * @param $password
+     * 
+     */
+       public function setPasswordAttribute($password){
+        $this->attributes['password'] = bcrypt($password);
+       }
 }

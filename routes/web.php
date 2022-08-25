@@ -5,6 +5,7 @@ use App\Http\Controllers\PortalController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\SubscribeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,10 @@ Route::get('/', function () {
 Route::get('/about-us', function () {
     return view('Bnker/html/ltr/about-us');
 })->middleware('guest');
+
+
+// SUBSCRIBE ROUTE
+Route::post('/subscribe',[SubscribeController::class, 'subscribe'])->middleware('guest');
 
 // AUTHENTICATE USER LOG REQUEST & DASHBOARD ROUTE
 Route::get('/login', [LoginController::class,'createLogin']);

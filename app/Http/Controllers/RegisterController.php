@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Providers\AppServiceProvider;
+use Illuminate\Http\Route;
+use App\Models\User;
 
 // require '../vendor/autoload.php';
 // use Aws;
@@ -21,6 +23,7 @@ class RegisterController extends Controller
     public function __construct(){
         $this->middleware('guest');
     }
+
 
     /**
      * Show the form to register a new account.
@@ -44,9 +47,21 @@ class RegisterController extends Controller
     {
 
         $attributes =  $request->validate([
+            'is_admin'=> 'required|boolean',
+            'username' => 'required|max:255|unique:users',
             'email'=> 'required|email|max:255|unique:users',
             'password' => 'required|min:7|max:255'
         ]);
+
+
+        if(User::where('email','=',strtolower($request->input('email')))->get() && User::count() < 0){
+
+            return redirect()->back()->withErrors(['msg' => 'The email has already been taken']);
+
+        }
+
+
+        $attributes['email'] = strtolower($attributes['email']);
 
 
         $user = User::create($attributes);

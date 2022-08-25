@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('lendings', function (Blueprint $table) {
             $table->id();
+            $table->integer('lending_form_id');
             $table->integer('admin_id');
+            $table->integer('user_id');
             $table->float('balance');
             $table->float('interest_rate');
-            $table->boolean('available');
+            $table->string('term');
+            $table->string('status');
             $table->timestamps();
         });
     }

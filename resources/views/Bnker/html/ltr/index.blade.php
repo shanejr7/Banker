@@ -31,6 +31,9 @@
     <!-- /Style Css -->
 
     <!-- /All CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
 
 </head>
 
@@ -1071,11 +1074,15 @@
                         <div class="footer-wrapper mb-30">
                             <h3 class="footer-title">Subscribe</h3>
                             <div class="subscribes-form">
-                                <form action="#">
-                                    <input placeholder="Enter email " type="email">
-                                    <button class="btn theme-btn-1 width-100 mt-10"><i
-                                            class="lab la-telegram-plane me-2"></i>subscribe</button>
+                                <div>
+                                <form>
+
+                                    <div class="message"></div> 
+                                    <input name="email" id="getemail" class="getemail" placeholder="Enter email " type="email">
                                 </form>
+                                    <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
+                                            class="lab la-telegram-plane me-2"></i>subscribe</button>
+                                </div>
                             </div>
                             <div class="footer-info">
                                 <p>Get the latest updates via email. Any time you may unsubscribe</p>
@@ -1144,6 +1151,9 @@
     <!-- /Main JS -->
 
     <!-- /JS -->
+
+    <script src="assets/js/custom_ajax.js"></script>
+   
 
 </body>
 

@@ -99,12 +99,13 @@ class PortalController extends Controller
               
 
        if (auth()->user()->is_admin != true) {
-            return view('/user-path',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
+            return view('/Bnker/html/ltr/user-dashboard');
+             // return view('/Bnker/html/ltr/user-dashboard',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
        }
 
        if (auth()->user()->is_admin == true) {
 
-            return redirect()->route('admin-path');
+            return view('Bnker/html/ltr/admin-dashboard');
         
        }
 

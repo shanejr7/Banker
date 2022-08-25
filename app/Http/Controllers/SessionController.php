@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class SessionController extends Controller
 {
-    **
+    /**
      * construct middleware to guest
      *
      *

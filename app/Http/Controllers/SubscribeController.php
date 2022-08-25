@@ -7,6 +7,42 @@ use Illuminate\Http\Request;
 
 class SubscribeController extends Controller
 {
+
+    /**
+     * Subscribe user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function subscribe(Request $request){
+
+
+        $validator = \Validator::make($request->all(), [
+            'email' => 'required|email|max:255|unique:subscribes',
+        ]);
+        
+        if ($validator->fails())
+        {
+            return response()->json(['message'=>$validator->errors()->all()]);
+        }
+
+        if(Subscribe::where('email','=',strtolower($request->input('email')))->get()){
+
+            return response()->json(['message'=>'Subscription is already added']);
+
+        }
+
+        $subscriber = new Subscribe();
+        $subscriber->email = strtolower($request->input('email'));
+        $subscriber->save();
+
+        return response()->json(['message'=>'Subscription is successfully added']);
+
+
+     
+    }
+
+
     /**
      * Display a listing of the resource.
      *

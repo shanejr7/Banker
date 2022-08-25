@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 
-class Lending extends Model
+class LendingForm extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+     use HasApiTokens, HasFactory, Notifiable;
 
      /**
      * The attributes that are mass assignable.
@@ -17,11 +17,21 @@ class Lending extends Model
      * @var string[]
      */
     protected $fillable = [
-        
-        'balance',
-        'interest_rate',
-        'term',
-        'status',
+
+            'full_name',
+            'email',
+            'phone',
+            'state',
+            'gender',
+            'date_of_birth',
+            'maritial_status',
+            'address',
+            'purpose_of_loan',
+            'country',
+            'loan_amount',
+            'interest_rate'),
+            'term',
+            'status',
       
  
     ];
@@ -33,8 +43,7 @@ class Lending extends Model
      * @var array
      */
     protected $hidden = [
-        
-        'lending_form_id',
+
         'admin_id',
         'user_id',
     ];
@@ -50,4 +59,3 @@ class Lending extends Model
         'created_at' => 'datetime',
     ];
 }
-

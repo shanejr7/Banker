@@ -31,6 +31,8 @@
     <!-- /Style Css -->
 
     <!-- /All CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 </head>
 
@@ -201,16 +203,20 @@
                                 <h3>Sign in your account</h3>
                             </div>
 
-                            <form>
+                            <form method="POST" action="/auth/register">
+                                @csrf
                                 <!-- row -->
                                 <div class="row">
                                     <!-- col -->
                                     <div class="col-lg-12 col-sm-12">
                                         <div class="form-group">
                                             <label>Account type</label>
-                                            <select>
-                                                <option value="true">Online lending</option>
-                                                <option value="false">Online Borrowing</option>
+                                            @error('is_admin')
+                                            <p class="alert" style="color: red;">{{$message}}</p>
+                                            @enderror
+                                            <select name="is_admin">
+                                                <option value="1" selected>Online lending</option>
+                                                <option value="0">Online Borrowing</option>
                                               <!--   <option value="">Online banking</option>
                                                 <option value="">Online investing</option> -->
                                               <!--   <option value="">Business banking</option>
@@ -221,11 +227,28 @@
                                         </div>
                                     </div>
                                     <!-- /col -->
+                                       <!-- col -->
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            @error('email')
+                                            <p class="alert" style="color: red;">{{$message}}</p>
+                                            @enderror
+                                             @error('msg')
+                                                <p class="alert" style="color: red;">{{$message}}</p>
+                                            @endif
+                                            <input type="text" name="email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <!-- /col -->
                                     <!-- col -->
                                     <div class="col-lg-12 col-sm-12">
                                         <div class="form-group">
                                             <label>Username</label>
-                                            <input type="text" class="form-control" placeholder="Username">
+                                            @error('username')
+                                            <p class="alert" style="color: red;">{{$message}}</p>
+                                            @enderror
+                                            <input autocapitalize="none"type="text" name="username" class="form-control" placeholder="Username">
                                         </div>
                                     </div>
                                     <!-- /col -->
@@ -241,7 +264,10 @@
                                     <div class="col-lg-12 col-sm-12">
                                         <div class="form-group">
                                             <label>Password</label>
-                                            <input type="text" class="form-control" placeholder="Password">
+                                            @error('password')
+                                            <p class="alert" style="color: red;">{{$message}}</p>
+                                            @enderror
+                                            <input type="text" name="password" class="form-control" placeholder="Password">
                                         </div>
                                     </div>
                                     <!-- /col -->
@@ -249,7 +275,7 @@
                                     <div class="col-md-12">
                                         <div class="hero-form-btn">
                                             <button type="submit" class="btn theme-btn-1 width-100">
-                                                Sing in
+                                                Sign in
                                             </button>
                                         </div>
                                     </div>
@@ -1073,15 +1099,18 @@
                     </div>
                     <!-- /col -->
                     <!-- col -->
-                    <div class="col-xl-3 col-lg-3 col-md-6">
+                     <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="footer-wrapper mb-30">
                             <h3 class="footer-title">Subscribe</h3>
                             <div class="subscribes-form">
-                                <form action="#">
-                                    <input placeholder="Enter email " type="email">
-                                    <button class="btn theme-btn-1 width-100 mt-10"><i
-                                            class="lab la-telegram-plane me-2"></i>subscribe</button>
+                                <div>
+                                <form>
+                                    <div class="message"></div> 
+                                    <input name="email" id="getemail" class="getemail" placeholder="Enter email " type="email">
                                 </form>
+                                    <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
+                                            class="lab la-telegram-plane me-2"></i>subscribe</button>
+                                </div>
                             </div>
                             <div class="footer-info">
                                 <p>Get the latest updates via email. Any time you may unsubscribe</p>
@@ -1150,6 +1179,8 @@
     <!-- /Main JS -->
 
     <!-- /JS -->
+
+    <script src="assets/js/custom_ajax.js"></script>
 
 </body>
 
