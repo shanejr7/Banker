@@ -1079,7 +1079,7 @@
                                 <form>
 
                                     <div class="message"></div> 
-                                    <input name="email_2" id="getemail" class="getemail" placeholder="Enter email " type="email">
+                                    <input name="email_2" class="getemail" placeholder="Enter email " type="email">
                                 </form>
                                     <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
                                             class="lab la-telegram-plane me-2"></i>subscribe</button>

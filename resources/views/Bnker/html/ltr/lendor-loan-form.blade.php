@@ -79,7 +79,7 @@
                                 </ul> -->
                             </li>
 
-                            <li class="nav-item"><a href="/dashboard" class="nav-link active">Dashboard</a>
+                            <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a>
 
                        
                           
@@ -104,7 +104,7 @@
                                 </ul>
                             </li> -->
 
-                            <li class="nav-item"><a href="#" class="nav-link">Pages <i
+                            <li class="nav-item"><a href="#" class="nav-link active">Pages <i
                                         class='las la-angle-down'></i></a>
                                 <ul class="dropdown-menu">
                                    
@@ -123,7 +123,7 @@
                                     </li>
                                     <li class="nav-item"><a href="loan-calculation.html" class="nav-link">Loan
                                             Calculation</a></li>
-                                    <li class="nav-item"><a href="/lendor-form" class="nav-link">Loan Form</a></li>
+                                    <li class="nav-item"><a href="/lendor-form" class="nav-link active">Loan Form</a></li>
                                         <li class="nav-item"><a href="open-account.html" class="nav-link">Find a borrower</a>
                                     <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->
                                          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
@@ -186,8 +186,8 @@
                 <!-- col  -->
                 <div class="col-md-6">
                     <div class="banner-content banner-padding">
-                        <h3 class="title">DASHBOARD</h3>
-                        <p>Welcome to your lendor account. </p>
+                        <h3 class="title">LOANS FORM</h3>
+                        <p>Get started on your next <span style="color:red">Banker</span> opportunity. </p>
                     </div>
                 </div>
                 <!-- /col -->
@@ -195,7 +195,7 @@
                 <div class="col-md-6 mt-7 mt-md-0">
                     <div class="banner-content scene banner-img">
                         <div data-depth="0.2">
-                            <img src="assets/images/bg/7.png" alt="img" />
+                            <img src="assets/images/bg/6.png" alt="img" />
                         </div>
                     </div>
                 </div>
@@ -207,193 +207,223 @@
     </div>
     <!-- /Breadcrumb -->
 
-    <!-- /Portfolio -->
-    <div class="portfolio-page pt-100 pb-100">
+    <!-- Loan Form -->
+    <div class="loan-form-area pt-100 pb-100">
         <!-- Container -->
         <div class="container">
             <!-- row -->
-            <div class="row">
+            <div class="row justify-content-center text-center">
                 <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio mr-20 mr-sm-0 ">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/1.jpg" alt="" />
+                <div class="col-lg-8 col-md-12 mb-50">
+                    <div class="section-title">
+                        <h2 class="title">Create a loan</h2>
+                        <div class="title-bdr">
+                            <div class="left-bdr"></div>
+                            <div class="right-bdr"></div>
                         </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="#">Personal Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio ml-10 ml-sm-0 mr-10 mr-sm-0">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/2.jpg" alt="" />
-                        </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Business Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio ml-20 ml-sm-0">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/3.jpg" alt="" />
-                        </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Private Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio mr-20 mr-sm-0">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/4.jpg" alt="" />
-                        </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Personal Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio ml-20 ml-sm-0">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/6.jpg" alt="" />
-                        </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Business Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio ml-10 ml-sm-0 mr-10 mr-sm-0">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/5.jpg" alt="" />
-                        </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Private Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio mr-20 mr-sm-0">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/7.jpg" alt="" />
-                        </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Personal Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio ml-10 ml-sm-0 mr-10 mr-sm-0">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/8.jpg" alt="" />
-                        </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Business Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="single-portfolio ml-20 ml-sm-0">
-                        <div class="portfolio-thumb">
-                            <img src="assets/images/folio/9.jpg" alt="" />
-                        </div>
-                        <div class="portfoilo-overlay">
-                            <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Private Loan</a></h4>
-                                <!-- <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
-                            </div>
-                        </div>
+                        <p>Making a loan form is easy. No upfront cost until a borrower makes a requests.
+                            Once payments are started there is a charge rate fee of 0.5% - 1.75%.</p>
                     </div>
                 </div>
                 <!-- /col -->
             </div>
             <!-- /row -->
-            <!-- row -->
-            <div class="row">
-                <!-- col -->
-                <div class="col-lg-12 text-center">
-                    <h2 class="sec_title">
-                        If you want to get started!<br>
-                        Quickly hit this button.
-                    </h2>
-                    <a href="#" class="btn theme-btn-1">Loan Form</a>
-                </div>
-                <!-- /col -->
+
+            <div class="loan-form">
+                <form method="POST" action="/lendor-form-submit">
+                    @csrf
+                    <!--row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Full name</label>
+                                @error('full_name')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <input type="text" class="form-control" placeholder="Full name">
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Email</label>
+                                 @error('email')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <input name="email" type="text" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Phone</label>
+                                 @error('phone')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <input name="phone" type="text" class="form-control" placeholder="Phone">
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>State</label>
+                                 @error('state')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <input name="state" type="text" class="form-control" placeholder="State">
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Gender</label>
+                                 @error('gender')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <select name="gender">
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Date of birth</label>
+                                 @error('date_of_birth')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <input name="date_of_birth" type="text" class="form-control" placeholder="dd/mm/yy">
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Marital status</label>
+                                 @error('marital_status')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <select>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Address</label>
+                                 @error('address')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <input name="address" type="text" class="form-control" placeholder="Address">
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Purpose of loan</label>
+                                 @error('purpose_of_loan')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                 <select name="purpose_of_loan">
+                                    <option value="personal_loan">Personal Loan</option>
+                                    <option value="business_loan">Business Loan</option>
+                                    <option value="education_loan">Education Loan</option>
+                                    <option value="credit_loan">Credit Loan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Country</label>
+                                @error('country')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <select name="country">
+                                    <option value="">Country</option>
+                                    <option value="england">England</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="usa">USA</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Loan amount</label>
+                                 @error('loan_amount')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <select name="loan_amount">
+                                    <option value="1 - 10">$1 - 10</option>
+                                    <option value="10 - 50">$10 - 50</option>
+                                    <option value="50 - 100">$50 - 100</option>
+                                    <option value="100 - 500">$100 - 500</option>
+                                    <option value="500 - 1000">$500 - 1000</option>
+                                    <option value="1000 - 5000">$1000 - 5000</option>
+                                    <option value="5000 - 10,000">$5000 - 10,000</option>
+                                    <option value="5000 - 10,000">$5000 - 10,000</option>
+                                    <option value="15,000 - 25,000">$15,000 - 25,000</option>
+                                    <option value="25,000 - 50,000">$25,000 - 50,000</option>
+                                    <option value="50,000 - 60,000">$50,000 - 60,000</option>
+                                    <option value="60,000 - 70,000">$60,000 - 70,000</option>
+                                    <option value="70,000 - 80,000">$70,000 - 80,000</option>
+                                    <option value="80,000 - 90,000">$80,000 - 90,000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Loan term</label>
+                                @error('loan_term')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                <select>
+                                    <option value="1 months">1 months</option>
+                                    <option value="5 months">5 months</option>
+                                    <option value="8 months">8 months</option>
+                                    <option value="9 months">9 months</option>
+                                    <option value="10 months">10 months</option>
+                                    <option value="11 months">11 months</option>
+                                    <option value="12 months">12 months</option>
+                                    <option value="none">No term</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-lg-12">
+                            <div class="banner-form-btn">
+                                <button type="submit" class="default-btn">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                    </div>
+                    <!-- /row -->
+                </form>
             </div>
-            <!-- /row -->
         </div>
         <!-- /Container -->
     </div>
-    <!-- /Portfolio -->
+    <!-- /Loan Form -->
 
     <!-- Cta -->
     <div class="cta-area">
@@ -446,7 +476,7 @@
                 </div>
                 <!-- /col -->
                 <!-- col -->
-           <!--      <div class="col-xl-9 col-lg-9  col-md-8 mb-30">
+            <!--     <div class="col-xl-9 col-lg-9  col-md-8 mb-30">
                     <div class="footer-top-wrapper">
                         <ul class="footer-top-link text-end">
                             <li><a href="#">Layouts </a></li>
@@ -470,7 +500,7 @@
                         <div class="footer-wrapper mb-30">
                             <h3 class="footer-title">About Us</h3>
                             <div class="footer-text">
-                                <p>Presenting Banking Plan & Services That are Right For You</p>
+                                  <p>Presenting Banking Plan & Services That are Right For You</p>
                             </div>
                             <div class="footer-icon">
                                 <a href="#"><i class="uil uil-facebook-f"></i></a>
@@ -515,7 +545,7 @@
                     </div>
                     <!-- /col -->
                     <!-- col -->
-                      <div class="col-xl-3 col-lg-3 col-md-6">
+                  <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="footer-wrapper mb-30">
                             <h3 class="footer-title">Subscribe</h3>
                             <div class="subscribes-form">
@@ -523,7 +553,7 @@
                                 <form>
 
                                     <div class="message"></div> 
-                                    <input name="email_4" class="getemail" placeholder="Enter email " type="email">
+                                    <input name="email_5" class="getemail" placeholder="Enter email " type="email">
                                 </form>
                                     <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
                                             class="lab la-telegram-plane me-2"></i>subscribe</button>
@@ -597,10 +627,10 @@
 
     <!-- /JS -->
 
-       <script >
+      <script>
          $(".post_subscribe_button").click(function(event){
       event.preventDefault();
-      let email = $("input[name=email_4]").val();
+      let email = $("input[name=email_5]").val();
       let _token   = $('meta[name="csrf-token"]').attr('content');
 
       $.ajax({

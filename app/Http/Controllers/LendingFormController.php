@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\LendingForm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
 
 class LendingFormController extends Controller
 {
@@ -25,6 +28,67 @@ class LendingFormController extends Controller
     public function create()
     {
         //
+    }
+
+     /**
+     * Show the form for creating a new lendor form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function createLendorForm(Request $request){
+
+        return view('Bnker/html/ltr/lendor-loan-form');
+
+    }
+
+
+     /**
+     * Form submission for creating a new lendor form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function lendorFormSubmit(Request $request){
+
+
+
+        $attributes =  $request->validate([
+
+            'admin_id'=> 'required',
+            'full_name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'state' => 'required',
+            'gender' => 'required',
+            'date_of_birth' => 'required',
+            'maritial_status' => 'required',
+            'address' => 'required',
+            'purpose_of_loan' => 'required',
+            'country' => 'required',
+            'loan_amount' => 'required',
+            'interest_rate' => 'required',
+            'term' => 'required',
+            'status' => 'required',
+        
+        ]);
+
+
+        if ($attributes) {
+
+
+            LendingForm::create($attributes);
+
+
+            return redirect()->route('lendorFormPage');
+        
+
+        
+        }
+
+
+       return redirect()->back()->withErrors();
+
     }
 
     /**

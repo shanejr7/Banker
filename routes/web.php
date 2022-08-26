@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\LendingFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,15 +21,15 @@ use App\Http\Controllers\SubscribeController;
 
 Route::get('/', function () {
     return view('Bnker/html/ltr/index');
-})->middleware('guest');
+});
 
 Route::get('/about-us', function () {
     return view('Bnker/html/ltr/about-us');
-})->middleware('guest');
+});
 
 
 // SUBSCRIBE ROUTE
-Route::post('/subscribe',[SubscribeController::class, 'subscribe'])->middleware('guest');
+Route::post('/subscribe',[SubscribeController::class, 'subscribe']);
 
 // AUTHENTICATE USER LOG REQUEST & DASHBOARD ROUTE
 Route::get('/login', [LoginController::class,'createLogin']);
@@ -44,15 +45,17 @@ Route::post('/logout',[SessionController::class, 'destroy']);
 
 
 // ADMIN PAGE <admin>
-Route::get('/admin',[PortalController::class,'createAdmin'])->middleware('admin');
-Route::get('/adminAccount',[PortalController::class,'viewAccount'])->name('adminAccount')->middleware('admin');
-Route::get('/adminClients',[PortalController::class,'viewClients'])->name('adminClients')->middleware('admin');
+Route::get('/lendor-form',[LendingFormController::class,'createLendorForm'])->middleware('admin');
+Route::post('/lendor-form-submit',[LendingFormController::class,'lendorFormSubmit'])->name('lendorFormPage')->middleware('admin');
+
+// Route::get('/adminAccount',[PortalController::class,'viewAccount'])->name('adminAccount')->middleware('admin');
+// Route::get('/adminClients',[PortalController::class,'viewClients'])->name('adminClients')->middleware('admin');
 
 
 // USER PAGE <admin-user>
 Route::get('/dashboard', [PortalController::class,'createDashboard']);
 Route::get('/account', [PortalController::class,'createAccount']);
-Route::get('/ClientPortal', [PortalController::class,'createClientPortal']);
+
 
 
 Route::get('Bnker/html/ltr/404.html', function(){
