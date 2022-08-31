@@ -121,8 +121,8 @@
                                     <li class="nav-item"><a href="404.html" class="nav-link">404</a></li>
                                     <li class="nav-item"><a href="coming-soon.html" class="nav-link">Coming Soon</a>
                                     </li>
-                                    <li class="nav-item"><a href="loan-calculation.html" class="nav-link">Loan
-                                            Calculation</a></li>
+                                    <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
+                                    Calculation</a></li>
                                     <li class="nav-item"><a href="loans.html" class="nav-link">Loan Form</a></li>
                                     <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a>
                                     </li>
@@ -190,8 +190,8 @@
                                     <!-- <li class="nav-item"><a href="404.html" class="nav-link">404</a></li> -->
                                     <!-- <li class="nav-item"><a href="coming-soon.html" class="nav-link">Coming Soon</a> -->
                                     </li>
-                                    <li class="nav-item"><a href="loan-calculation.html" class="nav-link">Loan
-                                            Calculation</a></li>
+                                    <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
+                                    Calculation</a></li>
                                     <li class="nav-item"><a href="/lendor-form" class="nav-link">Loan Form</a></li>
                                         <li class="nav-item"><a href="open-account.html" class="nav-link">Find a borrower</a>
                                     <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->

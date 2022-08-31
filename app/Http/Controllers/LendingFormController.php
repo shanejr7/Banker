@@ -31,6 +31,22 @@ class LendingFormController extends Controller
         //
     }
 
+
+
+     /**
+     * show find borrower view.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+     public function lendorFindBorrower(Request $request){
+
+        return view('Bnker/html/ltr/lendor-find-borrower',['form' => LendingForm::where('user_id','!=',null)->where('status','=','created')->get()]);
+
+    }
+
+
+
      /**
      * Show the form for creating a new lendor form.
      *
@@ -40,6 +56,19 @@ class LendingFormController extends Controller
      public function createLendorForm(Request $request){
 
         return view('Bnker/html/ltr/lendor-loan-form');
+
+    }
+
+
+     /**
+     * Show the loan calculation form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+     public function loanCalculationForm(Request $request){
+
+        return view('Bnker/html/ltr/loan-calculation');
 
     }
 

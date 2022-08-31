@@ -86,51 +86,21 @@
                                             <li class="nav-item"><a href="/registration" class="nav-link">Register</a></li>
 
                             <li class="nav-item"><a href="/about-us" class="nav-link">About Us </a>
-                      <!--       <li class="nav-item"><a href="#" class="nav-link">About Us <i
-                                        class='las la-angle-down'></i></a> -->
-                              <!--   <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="about-us-1.html" class="nav-link">About Us 1</a></li>
-                                    <li class="nav-item"><a href="about-us-2.html" class="nav-link">About Us 2</a></li>
-                                </ul> -->
-                            </li>
-
-                        <!--     <li class="nav-item"><a href="#" class="nav-link">Portfolio <i
-                                        class='las la-angle-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                                    <li class="nav-item"><a href="portfolio-detail.html" class="nav-link">Portfolio
-                                            Details</a></li>
-                                </ul>
-                            </li> -->
+                   
 
                             <li class="nav-item"><a href="#" class="nav-link">Pages <i
                                         class='las la-angle-down'></i></a>
                                 <ul class="dropdown-menu">
+                                     <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
+                                    Calculation</a></li>
                                     <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                                    <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                                    <!-- <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li> -->
                                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Auth Page <i
-                                                class='las la-angle-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-                                            <li class="nav-item"><a href="/registration" class="nav-link">Sing Up</a></li>
-                                            <li class="nav-item"><a href="recover.html" class="nav-link">Recover</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                                    <li class="nav-item"><a href="404.html" class="nav-link">404</a></li>
-                                    <li class="nav-item"><a href="coming-soon.html" class="nav-link">Coming Soon</a>
-                                    </li>
-                                    <li class="nav-item"><a href="loan-calculation.html" class="nav-link">Loan
-                                            Calculation</a></li>
-                                    <li class="nav-item"><a href="loans.html" class="nav-link">Loan Form</a></li>
-                                    <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a>
+                             
                                     </li>
                                     <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy
                                             Policy</a></li>
-                                    <li class="nav-item"><a href="testimonials.html" class="nav-link">Testimonials</a>
-                                    </li>
+                                   
                                 </ul>
                             </li>
 
@@ -191,8 +161,8 @@
                                     <!-- <li class="nav-item"><a href="404.html" class="nav-link">404</a></li> -->
                                     <!-- <li class="nav-item"><a href="coming-soon.html" class="nav-link">Coming Soon</a> -->
                                     </li>
-                                    <li class="nav-item"><a href="loan-calculation.html" class="nav-link">Loan
-                                            Calculation</a></li>
+                                    <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
+                                    Calculation</a></li>
                                     <li class="nav-item"><a href="/lendor-form" class="nav-link">Loan Form</a></li>
                                         <li class="nav-item"><a href="open-account.html" class="nav-link">Find a borrower</a>
                                     <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->

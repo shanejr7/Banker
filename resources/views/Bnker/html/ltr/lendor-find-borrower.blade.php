@@ -79,7 +79,7 @@
                                 </ul> -->
                             </li>
 
-                            <li class="nav-item"><a href="/dashboard" class="nav-link active">Dashboard</a>
+                            <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a>
 
                        
                           
@@ -104,7 +104,7 @@
                                 </ul>
                             </li> -->
 
-                            <li class="nav-item"><a href="#" class="nav-link">Pages <i
+                            <li class="nav-item"><a href="#" class="nav-link active">Pages <i
                                         class='las la-angle-down'></i></a>
                                 <ul class="dropdown-menu">
                                    
@@ -124,7 +124,7 @@
                                     <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
                                     Calculation</a></li>
                                     <li class="nav-item"><a href="/lendor-form" class="nav-link">Loan Form</a></li>
-                                        <li class="nav-item"><a href="/lendor-find-borrower" class="nav-link">Find a borrower</a>
+                                        <li class="nav-item"><a href="/lendor-find-borrower" class="nav-link active">Find a borrower</a>
                                     <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->
                                          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
                                     <!-- <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li> -->
@@ -186,8 +186,8 @@
                 <!-- col  -->
                 <div class="col-md-6">
                     <div class="banner-content banner-padding">
-                        <h3 class="title">DASHBOARD</h3>
-                        <p>Welcome to your lendor account. </p>
+                        <h3 class="title">FIND A BORROWER</h3>
+                        <p>Search for a borrower that meets your standards. </p>
                     </div>
                 </div>
                 <!-- /col -->
@@ -213,16 +213,12 @@
     <div class="portfolio-page pt-100 pb-100">
         <!-- Container -->
         <div class="container">
-              @if(session()->has('lendor_form_message'))
-                <div class="alert alert-success">
-                 {{ session()->get('lendor_form_message') }}
-                </div>
-            @endif
+       
             <!-- row -->
             <div class="row">
                 <!-- col -->
                 @if(isset($forms) && count($forms)>0)
-                <h1 class="text-center" style="margin-bottom: 2em;">Loan Forms Created</h1>
+                        <h1 class="text-center" style="margin-bottom: 2em;">Borrower Loan Forms</h1>
                     @for ($i = 0; $i < sizeof($forms); $i++)
                          <div class="col-lg-4 col-md-6 item">
                             <div class="single-portfolio mr-20 mr-sm-0 ">
@@ -257,6 +253,7 @@
                 </div>
                     @endfor
                 @else
+                  <h1 class="text-center" style="margin-bottom: 2em;">No Borrower Loan Forms found :(</h1>
                      <div class="col-lg-4 col-md-6 item">
                     <div class="single-portfolio mr-20 mr-sm-0 ">
                         <div class="portfolio-thumb">
@@ -268,7 +265,7 @@
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -282,11 +279,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Business Loan</a></h4>
+                                <h4><a href="#">Business Loan</a></h4>
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -300,11 +297,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Private Loan</a></h4>
+                                <h4><a href="#">Private Loan</a></h4>
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -318,11 +315,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Personal Loan</a></h4>
+                                <h4><a href="#">Personal Loan</a></h4>
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -336,11 +333,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Business Loan</a></h4>
+                                <h4><a href="#">Business Loan</a></h4>
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -354,11 +351,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Private Loan</a></h4>
+                                <h4><a href="#">Private Loan</a></h4>
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -372,11 +369,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Personal Loan</a></h4>
+                                <h4><a href="#">Personal Loan</a></h4>
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -390,11 +387,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Business Loan</a></h4>
+                                <h4><a href="#">Business Loan</a></h4>
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -408,11 +405,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="/lendor-form">Private Loan</a></h4>
+                                <h4><a href="#">Private Loan</a></h4>
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-form">Create a Loan</a>
+                                <a class="btn portfolio-btn" href="#">Request Service Loan</a>
                             </div>
                         </div>
                     </div>
@@ -425,17 +422,7 @@
             </div>
             <!-- /row -->
             <!-- row -->
-            <div class="row">
-                <!-- col -->
-                <div class="col-lg-12 text-center">
-                    <h2 class="sec_title">
-                        If you want to get started!<br>
-                        Quickly hit this button.
-                    </h2>
-                    <a href="/lendor-form" class="btn theme-btn-1">Loan Form</a>
-                </div>
-                <!-- /col -->
-            </div>
+     
             <!-- /row -->
         </div>
         <!-- /Container -->
@@ -570,7 +557,7 @@
                                 <form>
 
                                     <div class="message"></div> 
-                                    <input name="email_4" class="getemail" placeholder="Enter email " type="email">
+                                    <input name="email_8" class="getemail" placeholder="Enter email " type="email">
                                 </form>
                                     <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
                                             class="lab la-telegram-plane me-2"></i>subscribe</button>
@@ -647,7 +634,7 @@
        <script >
          $(".post_subscribe_button").click(function(event){
       event.preventDefault();
-      let email = $("input[name=email_4]").val();
+      let email = $("input[name=email_8]").val();
       let _token   = $('meta[name="csrf-token"]').attr('content');
 
       $.ajax({

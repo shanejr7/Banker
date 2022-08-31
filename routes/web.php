@@ -50,6 +50,7 @@ Route::post('/lendor-form-submit',[LendingFormController::class,'lendorFormSubmi
 Route::get('/lendor-loan-form-view/{form}',[LendingFormController::class,'lendorFormView'])->name('lendorFormViewPage')->middleware('admin');
 Route::post('/lendor-form-update',[LendingFormController::class,'lendorFormUpdate'])->name('lendorFormUpdate')->middleware('admin');
 Route::delete('/lendor-form-delete',[LendingFormController::class,'destroy'])->name('lendorFormDelete')->middleware('admin');
+Route::get('/lendor-find-borrower',[LendingFormController::class,'lendorFindBorrower'])->name('lendorFindBorrower')->middleware('admin');
 
 // Route::get('/adminAccount',[PortalController::class,'viewAccount'])->name('adminAccount')->middleware('admin');
 // Route::get('/adminClients',[PortalController::class,'viewClients'])->name('adminClients')->middleware('admin');
@@ -58,6 +59,9 @@ Route::delete('/lendor-form-delete',[LendingFormController::class,'destroy'])->n
 // USER PAGE <admin-user>
 Route::get('/dashboard', [PortalController::class,'createDashboard']);
 Route::get('/account', [PortalController::class,'createAccount']);
+
+// OTHER PAGE ROUTES
+Route::get('/loan-calculations',[LendingFormController::class,'loanCalculationForm'])->name('loanCalculate');
 
 
 

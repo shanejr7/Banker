@@ -122,7 +122,7 @@
                                     <!-- <li class="nav-item"><a href="404.html" class="nav-link">404</a></li> -->
                                     <!-- <li class="nav-item"><a href="coming-soon.html" class="nav-link">Coming Soon</a> -->
                                     </li>
-                                    <li class="nav-item"><a href="loan-calculation.html" class="nav-link">Loan
+                                    <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
                                     Calculation</a></li>
                                     <li class="nav-item"><a href="/lendor-form" class="nav-link active">Loan Form</a></li>
                                     <li class="nav-item"><a href="open-account.html" class="nav-link">Find a borrower</a>
@@ -174,38 +174,7 @@
             </div>
             <!-- /Container -->
         </div>
-        <div class="others-option-for-responsive">
-            <!-- Container -->
-            <div class="container">
-                <div class="dot-menu">
-                    <div class="inner">
-                        <div class="circle circle-one"></div>
-                        <div class="circle circle-two"></div>
-                        <div class="circle circle-three"></div>
-                    </div>
-                </div>
-                <!-- Container -->
-                <div class="container">
-                    <div class="option-inner">
-                        <div class="others-option">
-                            <div class="option-item">
-                                <form class="search-box">
-                                    <input type="text" class="input-search" placeholder="Search for anything">
-                                    <button type="submit"><i class="flaticon-loupe"></i></button>
-                                </form>
-                            </div>
-
-                            <div class="option-item">
-                                <a href="contact.html" class="btn theme-btn-1"><i class="las la-angle-right"></i>Get
-                                Started</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Container -->
-            </div>
-            <!-- /Container -->
-        </div>
+       
     </div>
     <!-- /Header -->
 
