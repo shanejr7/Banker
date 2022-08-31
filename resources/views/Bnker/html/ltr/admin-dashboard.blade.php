@@ -208,13 +208,56 @@
     <!-- /Breadcrumb -->
 
     <!-- /Portfolio -->
+
+
     <div class="portfolio-page pt-100 pb-100">
         <!-- Container -->
         <div class="container">
+              @if(session()->has('lendor_form_message'))
+                <div class="alert alert-success">
+                 {{ session()->get('lendor_form_message') }}
+                </div>
+            @endif
             <!-- row -->
             <div class="row">
                 <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
+                @if(isset($forms) && count($forms)>0)
+                <h1 class="text-center" style="margin-bottom: 2em;">Loan Forms Created</h1>
+                    @for ($i = 0; $i < sizeof($forms); $i++)
+                         <div class="col-lg-4 col-md-6 item">
+                            <div class="single-portfolio mr-20 mr-sm-0 ">
+                        <div class="portfolio-thumb">
+                            <img src="assets/images/folio/1.jpg" alt="" />
+                        </div>
+                        <div class="portfoilo-overlay">
+                            <div class="portfolio-aling">
+                                @if($forms[$i]->purpose_of_loan=='personal_loan')
+                                  <h4><a href="#">Personal Loan &bull; {{{$forms[$i]->status}}}</a></h4>
+                                @endif
+
+                                @if($forms[$i]->purpose_of_loan=='business_loan')
+                                  <h4><a href="#">Business Loan &bull; {{{$forms[$i]->status}}}</a></h4>
+                                @endif
+
+                                @if($forms[$i]->purpose_of_loan=='education_loan')
+                                  <h4><a href="#">Education Loan &bull; {{{$forms[$i]->status}}}</a></h4>
+                                @endif
+
+                                @if($forms[$i]->purpose_of_loan=='credit_loan')
+                                  <h4><a href="#">Credit Loan &bull; {{{$forms[$i]->status}}}</a></h4>
+                                @endif
+
+                                <!-- <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/lendor-loan-form-view/{{$forms[$i]->id}}">View Loan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    @endfor
+                @else
+                     <div class="col-lg-4 col-md-6 item">
                     <div class="single-portfolio mr-20 mr-sm-0 ">
                         <div class="portfolio-thumb">
                             <img src="assets/images/folio/1.jpg" alt="" />
@@ -375,6 +418,10 @@
                     </div>
                 </div>
                 <!-- /col -->
+                
+                @endif
+
+               
             </div>
             <!-- /row -->
             <!-- row -->
@@ -385,7 +432,7 @@
                         If you want to get started!<br>
                         Quickly hit this button.
                     </h2>
-                    <a href="#" class="btn theme-btn-1">Loan Form</a>
+                    <a href="/lendor-form" class="btn theme-btn-1">Loan Form</a>
                 </div>
                 <!-- /col -->
             </div>

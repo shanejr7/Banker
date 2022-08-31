@@ -227,12 +227,19 @@
                 </div>
                 <!-- /col -->
             </div>
+
+            @if(session()->has('lendor_form_message'))
+                <div class="alert alert-success">
+                 {{ session()->get('lendor_form_message') }}
+                </div>
+            @endif
             <!-- /row -->
 
             <div class="loan-form">
                 <form method="POST" action="/lendor-form-submit">
                     @csrf
                     <!--row -->
+
                     <div class="row">
                         <!-- col -->
                         <div class="col-lg-6 col-md-6">
@@ -241,7 +248,7 @@
                                 @error('full_name')
                                     <p class="alert" style="color: red;">{{$message}}</p>
                                 @enderror
-                                <input type="text" class="form-control" placeholder="Full name">
+                                <input name="full_name" type="text" class="form-control" placeholder="Full name">
                             </div>
                         </div>
                         <!-- /col -->
@@ -252,7 +259,7 @@
                                  @error('email')
                                     <p class="alert" style="color: red;">{{$message}}</p>
                                 @enderror
-                                <input name="email" type="text" class="form-control" placeholder="Email">
+                                <input name="email" type="text" class="form-control" placeholder="{{auth()->user()->email}}" value="{{auth()->user()->email}}">
                             </div>
                         </div>
                         <!-- /col -->
@@ -310,7 +317,7 @@
                                  @error('marital_status')
                                     <p class="alert" style="color: red;">{{$message}}</p>
                                 @enderror
-                                <select>
+                                <select name="marital_status">
                                     <option value="single">Single</option>
                                     <option value="married">Married</option>
                                 </select>
@@ -367,7 +374,8 @@
                                  @error('loan_amount')
                                     <p class="alert" style="color: red;">{{$message}}</p>
                                 @enderror
-                                <select name="loan_amount">
+                                <input name="loan_amount" type="text" class="form-control" placeholder="$100">
+                               <!--  <select name="loan_amount">
                                     <option value="1 - 10">$1 - 10</option>
                                     <option value="10 - 50">$10 - 50</option>
                                     <option value="50 - 100">$50 - 100</option>
@@ -382,7 +390,7 @@
                                     <option value="60,000 - 70,000">$60,000 - 70,000</option>
                                     <option value="70,000 - 80,000">$70,000 - 80,000</option>
                                     <option value="80,000 - 90,000">$80,000 - 90,000</option>
-                                </select>
+                                </select> -->
                             </div>
                         </div>
                         <!-- /col -->
@@ -393,17 +401,28 @@
                                 @error('loan_term')
                                     <p class="alert" style="color: red;">{{$message}}</p>
                                 @enderror
-                                <select>
-                                    <option value="1 months">1 months</option>
-                                    <option value="5 months">5 months</option>
-                                    <option value="8 months">8 months</option>
-                                    <option value="9 months">9 months</option>
-                                    <option value="10 months">10 months</option>
-                                    <option value="11 months">11 months</option>
-                                    <option value="12 months">12 months</option>
+                                <select name="term">
+                                    <option value="1 months">1m</option>
+                                    <option value="5 months">5m</option>
+                                    <option value="8 months">8m</option>
+                                    <option value="9 months">9m</option>
+                                    <option value="10 months">10m</option>
+                                    <option value="11 months">11m</option>
+                                    <option value="12 months">12m</option>
                                     <option value="none">No term</option>
 
                                 </select>
+                            </div>
+                        </div>
+                        <!-- /col -->
+                           <!-- col -->
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Interest Rate</label>
+                                 @error('interest_rate')
+                                    <p class="alert" style="color: red;">{{$message}}</p>
+                                @enderror
+                                 <input name="interest_rate" type="text" class="form-control" placeholder="1.25%">
                             </div>
                         </div>
                         <!-- /col -->

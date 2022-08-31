@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Notification;
+use App\Models\LendingForm;
 
 
 
@@ -105,7 +106,7 @@ class PortalController extends Controller
 
        if (auth()->user()->is_admin == true) {
 
-            return view('Bnker/html/ltr/admin-dashboard');
+            return view('Bnker/html/ltr/admin-dashboard',['forms' => LendingForm::where('admin_id','=',Auth::id())->get()]);
         
        }
 

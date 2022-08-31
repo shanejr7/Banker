@@ -47,6 +47,9 @@ Route::post('/logout',[SessionController::class, 'destroy']);
 // ADMIN PAGE <admin>
 Route::get('/lendor-form',[LendingFormController::class,'createLendorForm'])->middleware('admin');
 Route::post('/lendor-form-submit',[LendingFormController::class,'lendorFormSubmit'])->name('lendorFormPage')->middleware('admin');
+Route::get('/lendor-loan-form-view/{form}',[LendingFormController::class,'lendorFormView'])->name('lendorFormViewPage')->middleware('admin');
+Route::post('/lendor-form-update',[LendingFormController::class,'lendorFormUpdate'])->name('lendorFormUpdate')->middleware('admin');
+Route::delete('/lendor-form-delete',[LendingFormController::class,'destroy'])->name('lendorFormDelete')->middleware('admin');
 
 // Route::get('/adminAccount',[PortalController::class,'viewAccount'])->name('adminAccount')->middleware('admin');
 // Route::get('/adminClients',[PortalController::class,'viewClients'])->name('adminClients')->middleware('admin');

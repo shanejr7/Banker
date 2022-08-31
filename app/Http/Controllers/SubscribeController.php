@@ -36,6 +36,8 @@ class SubscribeController extends Controller
         $subscriber->email = strtolower($request->input('email'));
         $subscriber->save();
 
+        $request->session()->regenerate();
+
         return response()->json(['message'=>'Subscription is successfully added']);
 
 

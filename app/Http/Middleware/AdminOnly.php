@@ -16,7 +16,13 @@ class AdminOnly
      */
     public function handle(Request $request, Closure $next)
     {
-         if (auth()->user()->is_admin == false) {
+
+
+        if (is_null(auth()->user())) {
+             abort(403);
+        }
+
+        if (auth()->user()->is_admin == false) {
              abort(403);
         }
 
