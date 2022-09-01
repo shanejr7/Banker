@@ -79,7 +79,7 @@
                                     <li class="nav-item"><a href="index-3.html" class="nav-link">Home 3</a></li>
                                 </ul> -->
                             </li>
-                            @unless (Auth::check()==true)
+                            @if(Auth::check()==false)
 
                               <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
                                             <li class="nav-item"><a href="/registration" class="nav-link">Register</a></li>
@@ -145,8 +145,8 @@
                                 </ul>
                             </li> -->
                       
-                            @endunless
-                            @unless (Auth::check()==false)
+                            @endif
+                            @if(Auth::check()==true && Auth::user()->is_admin == '1')
 
                                 <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a>
 
@@ -225,10 +225,91 @@
                                 </ul>
                             </li> -->
 
-                            @endunless
+                            @endif
+                            @if(Auth::check()==true && Auth::user()->is_admin == '0')
+
+                                <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a>
+
+                       
+                          
+
+                            <li class="nav-item"><a href="/about-us" class="nav-link active">About Us</a>
+
+                            <!-- <li class="nav-item"><a href="#" class="nav-link">About Us <i
+                                        class='las la-angle-down'></i></a> -->
+                               <!--  <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="about-us-1.html" class="nav-link">About Us 1</a></li>
+                                    <li class="nav-item"><a href="about-us-2.html" class="nav-link">About Us 2</a></li>
+                                </ul> -->
+                            </li>
+
+                          <!--   <li class="nav-item"><a href="#" class="nav-link active">Portfolio <i
+                                        class='las la-angle-down'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a>
+                                    </li>
+                                    <li class="nav-item"><a href="portfolio-detail.html" class="nav-link">Portfolio
+                                            Details</a></li>
+                                </ul>
+                            </li> -->
+
+                            <li class="nav-item"><a href="#" class="nav-link">Pages <i
+                                        class='las la-angle-down'></i></a>
+                                <ul class="dropdown-menu">
+                                   
+                                   <!--  <li class="nav-item"><a href="#" class="nav-link">Auth Page <i
+                                                class='las la-angle-right'></i></a> -->
+                                       <!--  <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                                            <li class="nav-item"><a href="signup.html" class="nav-link">Sing Up</a></li>
+                                            <li class="nav-item"><a href="recover.html" class="nav-link">Recover</a>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+                               <!--      <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li> -->
+                                    <!-- <li class="nav-item"><a href="404.html" class="nav-link">404</a></li> -->
+                                    <!-- <li class="nav-item"><a href="coming-soon.html" class="nav-link">Coming Soon</a> -->
+                                    </li>
+                                    <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
+                                    Calculation</a></li>
+                                    <li class="nav-item"><a href="/borrower-form" class="nav-link">Loan Form</a></li>
+                                        <li class="nav-item"><a href="/borrower-find-lendor" class="nav-link">Find a lendor</a></li>
+                                    <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->
+                                         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                                    <!-- <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li> -->
+                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                                    </li>
+                                    <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy
+                                            Policy</a></li>
+                                    <!-- <li class="nav-item"><a href="testimonials.html" class="nav-link">Testimonials</a> -->
+                                    </li>
+                                </ul>
+                            </li>
+                                 <li class="nav-item">
+                                <a href="#" class="nav-link">   <form method="POST" action="/logout">
+                                                @csrf
+                                                <button style="border:none; background: transparent;"  type="submit">Logout</button>
+
+                                            </form></a>
+                            </li>
+
+
+                       <!--      <li class="nav-item"><a href="#" class="nav-link">Blog <i class='las la-angle-down'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                                    <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
+                                    <li class="nav-item"><a href="blog-single-sidebar.html" class="nav-link">Blog Single
+                                            Sidebar</a>
+                                    </li>
+                                    <li class="nav-item"><a href="blog-single.html" class="nav-link">Blog Single</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+
+                            @endif
                           
                         </ul>
-                        @unless (Auth::check()==true)
+                        @if(Auth::check()==false)
                          <div class="others-option d-flex align-items-center">
                           <!--   <div class="option-item">
                                 <form class="search-box">
@@ -242,8 +323,8 @@
                             </div>
                         </div>
                            
-                        @endunless
-                        @unless (Auth::check()==false)
+                        @endif
+                        @if(Auth::check()==true)
 
                           <div class="others-option d-flex align-items-center">
                           <!--   <div class="option-item">
@@ -257,7 +338,7 @@
                             </div>
                         </div>
                            
-                        @endunless
+                        @endif
                        
                     </div>
                 </nav>

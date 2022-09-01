@@ -52,9 +52,9 @@ class LendingFormController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function borrowerFindBorrower(Request $request){
+     public function borrowerFindLendor(Request $request){
 
-        return view('Bnker/html/ltr/borrower-find-lendor',['form' => LendingForm::where('admin_id','!=',null)->where('status','=','created')->get()]);
+        return view('Bnker/html/ltr/borrower-find-lendor',['forms' => LendingForm::where('admin_id','!=',null)->where('status','=','created')->get()]);
 
     }
 
@@ -149,7 +149,7 @@ class LendingFormController extends Controller
        $request->session()->regenerate();
 
 
-       return redirect('/borrower-loan-form-view'.$form)->with('lendor_form_message', 'Form updated successfully!');
+       return redirect('/borrower-loan-form-view/'.$form)->with('lendor_form_message', 'Form updated successfully!');
 
    }
 
@@ -238,7 +238,7 @@ class LendingFormController extends Controller
 
      public function lendorFindBorrower(Request $request){
 
-        return view('Bnker/html/ltr/lendor-find-borrower',['form' => LendingForm::where('user_id','!=',null)->where('status','=','created')->get()]);
+        return view('Bnker/html/ltr/lendor-find-borrower',['forms' => LendingForm::where('user_id','!=',null)->where('status','=','created')->get()]);
 
     }
 

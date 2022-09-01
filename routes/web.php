@@ -64,7 +64,7 @@ Route::post('/borrower-form-submit',[LendingFormController::class,'borrowerFormS
 Route::get('/borrower-loan-form-view/{form}',[LendingFormController::class,'borrowerFormView'])->name('borrowerFormViewPage')->middleware('auth');
 Route::post('/borrower-form-update',[LendingFormController::class,'borrowerFormUpdate'])->name('borrowerFormUpdate')->middleware('auth');
 Route::delete('/borrower-form-delete',[LendingFormController::class,'destroy'])->name('borrowerFormDelete')->middleware('auth');
-Route::get('/borrower-find-lendor',[LendingFormController::class,'borrowerFindBorrower'])->name('borrowerFindLendor')->middleware('auth');
+Route::get('/borrower-find-lendor',[LendingFormController::class,'borrowerFindLendor'])->name('borrowerFindLendor')->middleware('auth');
 
 // OTHER PAGE ROUTES
 Route::get('/loan-calculations',[LendingFormController::class,'loanCalculationForm'])->name('loanCalculate');
