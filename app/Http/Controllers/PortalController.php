@@ -41,51 +41,6 @@ class PortalController extends Controller
 
 
     /**
-     * admin page.
-     *
-     * @return \Illuminate\View\View
-     */
-
-    public function createAdmin()
-    {
-
-
-        return view('/admin-page',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
-    }
-
-    /**
-     * admin account page.
-     *
-     * @return \Illuminate\View\View
-     */
-
-    public function viewAccount()
-    {
-
-
-        return view('/admin-account',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
-    }
-
-
-    /**
-     * Show business portal.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function createClientPortal()
-    {
-
-        if (auth()->guest()) {
-            abort(403);
-            
-        }
-
-
-        return view('/emg-main/web/MalexHTML/App/dist/client-portal',['notifications' => Notification::where('user_id','=',Auth::id())->get()],['client' => Clients::where('user_id','=',Auth::id())->first()]);
-    }
-
-
-    /**
      * Show dashboard account.
      *
      * @return \Illuminate\View\View
@@ -100,8 +55,8 @@ class PortalController extends Controller
               
 
        if (auth()->user()->is_admin != true) {
-            return view('/Bnker/html/ltr/user-dashboard');
-             // return view('/Bnker/html/ltr/user-dashboard',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
+
+            return view('/Bnker/html/ltr/user-dashboard',['forms' => LendingForm::where('user_id','=',Auth::id())->get()]);
        }
 
        if (auth()->user()->is_admin == true) {
@@ -112,21 +67,6 @@ class PortalController extends Controller
 
        return redirect()->back()->withErrors();
        
-    }
-
-    /**
-     * Show account .
-     *
-     * @return \Illuminate\View\View
-     */
-    public function createAccount()
-    {
-        if (auth()->guest()) {
-            abort(403);
-            
-        }
-
-        return view('user account page',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
     }
 
 

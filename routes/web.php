@@ -43,6 +43,8 @@ Route::post('/auth/register',[RegisterController::class, 'authenticate']);
 // USER LOGOUT & DESTROY SESSION
 Route::post('/logout',[SessionController::class, 'destroy']);
 
+// DASHBOARD ROUTE USER/ADMIN
+Route::get('/dashboard', [PortalController::class,'createDashboard']);
 
 // ADMIN PAGE <admin>
 Route::get('/lendor-form',[LendingFormController::class,'createLendorForm'])->middleware('admin');
@@ -56,9 +58,13 @@ Route::get('/lendor-find-borrower',[LendingFormController::class,'lendorFindBorr
 // Route::get('/adminClients',[PortalController::class,'viewClients'])->name('adminClients')->middleware('admin');
 
 
-// USER PAGE <admin-user>
-Route::get('/dashboard', [PortalController::class,'createDashboard']);
-Route::get('/account', [PortalController::class,'createAccount']);
+// USER PAGE <user>
+Route::get('/borrower-form',[LendingFormController::class,'createBorrowerForm'])->middleware('auth');
+Route::post('/borrower-form-submit',[LendingFormController::class,'borrowerFormSubmit'])->name('borrowerFormPage')->middleware('auth');
+Route::get('/borrower-loan-form-view/{form}',[LendingFormController::class,'borrowerFormView'])->name('borrowerFormViewPage')->middleware('auth');
+Route::post('/borrower-form-update',[LendingFormController::class,'borrowerFormUpdate'])->name('borrowerFormUpdate')->middleware('auth');
+Route::delete('/borrower-form-delete',[LendingFormController::class,'destroy'])->name('borrowerFormDelete')->middleware('auth');
+Route::get('/borrower-find-lendor',[LendingFormController::class,'borrowerFindBorrower'])->name('borrowerFindLendor')->middleware('auth');
 
 // OTHER PAGE ROUTES
 Route::get('/loan-calculations',[LendingFormController::class,'loanCalculationForm'])->name('loanCalculate');

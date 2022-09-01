@@ -193,7 +193,7 @@
                                     <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
                                     Calculation</a></li>
                                     <li class="nav-item"><a href="/lendor-form" class="nav-link">Loan Form</a></li>
-                                        <li class="nav-item"><a href="open-account.html" class="nav-link">Find a borrower</a>
+                                        <li class="nav-item"><a href="/lendor-find-borrower" class="nav-link">Find a borrower</a></li>
                                     <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->
                                          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
                                     <!-- <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li> -->

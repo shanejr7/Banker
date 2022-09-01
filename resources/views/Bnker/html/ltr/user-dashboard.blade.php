@@ -32,6 +32,9 @@
 
     <!-- /All CSS -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
 </head>
 
 <body>
@@ -62,35 +65,37 @@
         <div class="acavo-nav">
             <!-- Container -->
             <div class="container-fluid">
-                <nav class="navbar navbar-expand-md navbar-light">
+                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="/">
                         <img src="assets/images/logo.png" alt="logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="#" class="nav-link">Home <i class='las la-angle-down'></i></a>
-                                <ul class="dropdown-menu">
+                            <li class="nav-item"><a href="/" class="nav-link">Home</a>
+                            <!-- <li class="nav-item"><a href="#" class="nav-link">Home <i class='las la-angle-down'></i></a> -->
+                              <!--   <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="/" class="nav-link">Home 1</a></li>
                                     <li class="nav-item"><a href="index-2.html" class="nav-link">Home 2</a></li>
                                     <li class="nav-item"><a href="index-3.html" class="nav-link">Home 3</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
 
-                             <form method="POST" action="/logout">
-                                                @csrf
-                                                <button style="border:none; background: transparent;"  type="submit">Logout</button>
+                            <li class="nav-item"><a href="/dashboard" class="nav-link active">Dashboard</a>
 
-                                            </form>
+                       
+                          
 
-                            <li class="nav-item"><a href="#" class="nav-link">About Us <i
-                                        class='las la-angle-down'></i></a>
-                                <ul class="dropdown-menu">
+                            <li class="nav-item"><a href="/about-us" class="nav-link">About Us</a>
+
+                            <!-- <li class="nav-item"><a href="#" class="nav-link">About Us <i
+                                        class='las la-angle-down'></i></a> -->
+                               <!--  <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="about-us-1.html" class="nav-link">About Us 1</a></li>
                                     <li class="nav-item"><a href="about-us-2.html" class="nav-link">About Us 2</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link active">Portfolio <i
+                          <!--   <li class="nav-item"><a href="#" class="nav-link active">Portfolio <i
                                         class='las la-angle-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a>
@@ -98,40 +103,53 @@
                                     <li class="nav-item"><a href="portfolio-detail.html" class="nav-link">Portfolio
                                             Details</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
 
                             <li class="nav-item"><a href="#" class="nav-link">Pages <i
                                         class='las la-angle-down'></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                                    <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
-                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Auth Page <i
-                                                class='las la-angle-right'></i></a>
-                                        <ul class="dropdown-menu">
+                                   
+                                   <!--  <li class="nav-item"><a href="#" class="nav-link">Auth Page <i
+                                                class='las la-angle-right'></i></a> -->
+                                       <!--  <ul class="dropdown-menu">
                                             <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
                                             <li class="nav-item"><a href="signup.html" class="nav-link">Sing Up</a></li>
                                             <li class="nav-item"><a href="recover.html" class="nav-link">Recover</a>
                                             </li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
-                                    <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                                    <li class="nav-item"><a href="404.html" class="nav-link">404</a></li>
-                                    <li class="nav-item"><a href="coming-soon.html" class="nav-link">Coming Soon</a>
+                               <!--      <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li> -->
+                                    <!-- <li class="nav-item"><a href="404.html" class="nav-link">404</a></li> -->
+                                    <!-- <li class="nav-item"><a href="coming-soon.html" class="nav-link">Coming Soon</a> -->
                                     </li>
-                                    <li class="nav-item"><a href="loan-calculation.html" class="nav-link">Loan
-                                            Calculation</a></li>
-                                    <li class="nav-item"><a href="loans.html" class="nav-link">Loan Form</a></li>
-                                    <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a>
+                                    <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
+                                    Calculation</a></li>
+                                    <li class="nav-item"><a href="/borrower-form" class="nav-link">Loan Form</a></li>
+
+                                        <li class="nav-item"><a href="/borrower-find-lendor" class="nav-link">Find a lendor</a></li>
+                                         <li class="nav-item"><a href="/borrower-request" class="nav-link">Loan Request</a></li>
+
+                                    <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->
+                                         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                                    <!-- <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li> -->
+                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                                     </li>
                                     <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy
                                             Policy</a></li>
-                                    <li class="nav-item"><a href="testimonials.html" class="nav-link">Testimonials</a>
+                                    <!-- <li class="nav-item"><a href="testimonials.html" class="nav-link">Testimonials</a> -->
                                     </li>
                                 </ul>
                             </li>
+                                 <li class="nav-item">
+                                <a href="#" class="nav-link">   <form method="POST" action="/logout">
+                                                @csrf
+                                                <button style="border:none; background: transparent;"  type="submit">Logout</button>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Blog <i class='las la-angle-down'></i></a>
+                                            </form></a>
+                            </li>
+
+
+                       <!--      <li class="nav-item"><a href="#" class="nav-link">Blog <i class='las la-angle-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                                     <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
@@ -141,18 +159,17 @@
                                     <li class="nav-item"><a href="blog-single.html" class="nav-link">Blog Single</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                         <div class="others-option d-flex align-items-center">
-                            <div class="option-item">
+                          <!--   <div class="option-item">
                                 <form class="search-box">
                                     <input type="text" class="input-search" placeholder="Search for anything">
                                     <button type="submit"><i class="uil uil-search-alt"></i></button>
                                 </form>
-                            </div>
+                            </div> -->
                             <div class="option-item">
-                                <a href="contact.html" class="btn theme-btn-1">Get
-                                    Started <i class="las la-angle-right"></i></a>
+                                <a href="#" class="btn theme-btn-1">@ {{auth()->user()->username}}</a>
                             </div>
                         </div>
                     </div>
@@ -205,7 +222,7 @@
                 <div class="col-md-6">
                     <div class="banner-content banner-padding">
                         <h3 class="title">DASHBOARD</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        <p>Welcome to your <span style="color:red">Banker</span> account. </p>
                     </div>
                 </div>
                 <!-- /col -->
@@ -232,18 +249,54 @@
             <!-- row -->
             <div class="row">
                 <!-- col -->
-                <div class="col-lg-4 col-md-6 item">
+                @if(isset($forms) && count($forms)>0)
+                <h1 class="text-center" style="margin-bottom: 2em;">Loan Forms Created</h1>
+                    @for ($i = 0; $i < sizeof($forms); $i++)
+                         <div class="col-lg-4 col-md-6 item">
+                            <div class="single-portfolio mr-20 mr-sm-0 ">
+                        <div class="portfolio-thumb">
+                            <img src="assets/images/folio/1.jpg" alt="" />
+                        </div>
+                        <div class="portfoilo-overlay">
+                            <div class="portfolio-aling">
+                                @if($forms[$i]->purpose_of_loan=='personal_loan')
+                                  <h4><a href="#">Personal Loan &bull; {{{$forms[$i]->status}}}</a></h4>
+                                @endif
+
+                                @if($forms[$i]->purpose_of_loan=='business_loan')
+                                  <h4><a href="#">Business Loan &bull; {{{$forms[$i]->status}}}</a></h4>
+                                @endif
+
+                                @if($forms[$i]->purpose_of_loan=='education_loan')
+                                  <h4><a href="#">Education Loan &bull; {{{$forms[$i]->status}}}</a></h4>
+                                @endif
+
+                                @if($forms[$i]->purpose_of_loan=='credit_loan')
+                                  <h4><a href="#">Credit Loan &bull; {{{$forms[$i]->status}}}</a></h4>
+                                @endif
+
+                                <!-- <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/lendor-loan-form-view/{{$forms[$i]->id}}">View Loan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    @endfor
+                @else
+                     <div class="col-lg-4 col-md-6 item">
                     <div class="single-portfolio mr-20 mr-sm-0 ">
                         <div class="portfolio-thumb">
                             <img src="assets/images/folio/1.jpg" alt="" />
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Personal Loan</a></h4>
-                                <p>
+                                <h4><a href="#">Personal Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
@@ -257,11 +310,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Business Loan</a></h4>
-                                <p>
+                                <h4><a href="/borrower-form">Business Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
@@ -275,11 +328,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Private Loan</a></h4>
-                                <p>
+                                <h4><a href="/borrower-form">Private Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
@@ -293,11 +346,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Personal Loan</a></h4>
-                                <p>
+                                <h4><a href="/borrower-form">Personal Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
@@ -311,11 +364,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Business Loan</a></h4>
-                                <p>
+                                <h4><a href="/borrower-form">Business Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
@@ -329,11 +382,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Private Loan</a></h4>
-                                <p>
+                                <h4><a href="/borrower-form">Private Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
@@ -347,11 +400,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Personal Loan</a></h4>
-                                <p>
+                                <h4><a href="/borrower-form">Personal Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
@@ -365,11 +418,11 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Business Loan</a></h4>
-                                <p>
+                                <h4><a href="/borrower-form">Business Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
@@ -383,27 +436,31 @@
                         </div>
                         <div class="portfoilo-overlay">
                             <div class="portfolio-aling">
-                                <h4><a href="portfolio-detail.html">Private Loan</a></h4>
-                                <p>
+                                <h4><a href="/borrower-form">Private Loan</a></h4>
+                                <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <a class="btn portfolio-btn" href="portfolio-detail.html">View Details</a>
+                                </p> -->
+                                <a class="btn portfolio-btn" href="/borrower-form">Create a Loan Form</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- /col -->
+                
+                @endif
+
+               
             </div>
             <!-- /row -->
             <!-- row -->
-            <div class="row">
+           <div class="row">
                 <!-- col -->
                 <div class="col-lg-12 text-center">
                     <h2 class="sec_title">
-                        If you want to see others Portfolio!<br>
+                        If you want to get started!<br>
                         Quickly hit this button.
                     </h2>
-                    <a href="#" class="btn theme-btn-1">Others Portfolio</a>
+                    <a href="/borrower-form" class="btn theme-btn-1">Loan Form</a>
                 </div>
                 <!-- /col -->
             </div>
@@ -488,8 +545,7 @@
                         <div class="footer-wrapper mb-30">
                             <h3 class="footer-title">About Us</h3>
                             <div class="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consect etuer adipiscing elit, sed diam nonu mmy nibh
-                                    euis </p>
+                                 <p>Presenting Banking Plan & Services That are Right For You</p>
                             </div>
                             <div class="footer-icon">
                                 <a href="#"><i class="uil uil-facebook-f"></i></a>
@@ -534,15 +590,19 @@
                     </div>
                     <!-- /col -->
                     <!-- col -->
-                    <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="footer-wrapper mb-30">
                             <h3 class="footer-title">Subscribe</h3>
                             <div class="subscribes-form">
-                                <form action="#">
-                                    <input placeholder="Enter email " type="email">
-                                    <button class="btn theme-btn-1 width-100 mt-10"><i
-                                            class="lab la-telegram-plane me-2"></i>subscribe</button>
+                                <div>
+                                <form>
+
+                                    <div class="message"></div> 
+                                    <input name="email_9" class="getemail" placeholder="Enter email " type="email">
                                 </form>
+                                    <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
+                                            class="lab la-telegram-plane me-2"></i>subscribe</button>
+                                </div>
                             </div>
                             <div class="footer-info">
                                 <p>Get the latest updates via email. Any time you may unsubscribe</p>
@@ -611,6 +671,25 @@
     <!-- /Main JS -->
 
     <!-- /JS -->
+          <script >
+         $(".post_subscribe_button").click(function(event){
+      event.preventDefault();
+      let email = $("input[name=email_9]").val();
+      let _token   = $('meta[name="csrf-token"]').attr('content');
+
+      $.ajax({
+        url: "/subscribe",
+        type:"POST",
+        data:{
+          email:email,
+          _token: _token
+        },
+           success:function(data){
+                $('.message').text(data.message); 
+           }
+       });
+  });
+    </script>
 
 </body>
 
