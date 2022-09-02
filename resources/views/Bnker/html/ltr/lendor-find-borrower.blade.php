@@ -246,7 +246,7 @@
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-loan-form-view/{{$forms[$i]->id}}">View Loan</a>
+                                <a class="btn portfolio-btn" href="/lendor-view-borrower-form/{{$forms[$i]->id}}">View Loan</a>
                             </div>
                         </div>
                     </div>

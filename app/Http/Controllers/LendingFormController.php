@@ -227,7 +227,7 @@ class LendingFormController extends Controller
 
             $request->session()->regenerate();
 
-            return redirect('/lendor-form')->with('lendor_form_message', 'Form submitted successfully!');
+            return redirect('/borrower-form')->with('lendor_form_message', 'Form submitted successfully!');
 
 
 
