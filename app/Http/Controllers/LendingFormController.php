@@ -241,6 +241,46 @@ class LendingFormController extends Controller
 
 
 
+    /**
+     * Show the view a borrower apply to lendor form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function borrowerApplyLendorFormSubmit(Request $request){
+
+        $attributes =  $request->validate([
+
+            'form_id' => 'required',
+            'loan_amount' => '',
+            'interest_rate' => '',
+            'term' => '',
+
+        ]);
+
+
+        $form = $request->input('form_id');
+
+
+        $LendingForm = LendingForm::where('id','=',$form)->first();
+
+
+        if(isset($LendingForm)){
+
+         $LendingForm->status = 'pending';
+       }
+
+
+       $request->session()->regenerate();
+
+
+       return redirect('/borrower-loan-form-view/'.$form)->with('lendor_form_message', 'Form request sent successfully!');
+
+   }
+
+
+
+
     //////////// admin functions ////////////////////
 
 
@@ -364,6 +404,45 @@ class LendingFormController extends Controller
 
 
        return redirect('/lendor-loan-form-view/'.$form)->with('lendor_form_message', 'Form updated successfully!');
+
+   }
+
+     /**
+     * Show the view a lendor apply to borrower form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function lendorApplyBorrowerFormSubmit(Request $request){
+
+        $attributes =  $request->validate([
+
+            'form_id' => 'required',
+            'loan_amount' => '',
+            'interest_rate' => '',
+            'term' => '',
+
+        ]);
+
+
+        $form = $request->input('form_id');
+
+
+        $LendingForm = LendingForm::where('id','=',$form)->first();
+
+
+        if(isset($LendingForm)){
+
+            $LendingForm->status = 'pending';
+
+            
+       }
+
+
+       $request->session()->regenerate();
+
+
+       return redirect('/lendor-view-borrower-form/'.$form)->with('lendor_form_message', 'Form request sent successfully!');
 
    }
 
