@@ -126,7 +126,7 @@
                                     <li class="nav-item"><a href="/lendor-form" class="nav-link">Loan Form</a></li>
 
                                         <li class="nav-item"><a href="/lendor-find-borrower" class="nav-link">Find a borrower</a></li>
-                                         <li class="nav-item"><a href="/lendor-request" class="nav-link">Loan Request</a></li>
+                                         <!-- <li class="nav-item"><a href="/lendor-request" class="nav-link">Loan Request</a></li> -->
 
                                     <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->
                                          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
@@ -225,7 +225,7 @@
             <div class="row">
                 <!-- col -->
                 @if(isset($forms) && count($forms)>0)
-                <h1 class="text-center" style="margin-bottom: 2em;">Loan Forms Created</h1>
+                <h1 class="text-center" style="margin-bottom: 2em;">Loan Forms Activity</h1>
                     @for ($i = 0; $i < sizeof($forms); $i++)
                          <div class="col-lg-4 col-md-6 item">
                             <div class="single-portfolio mr-20 mr-sm-0 ">
@@ -253,7 +253,12 @@
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
+                                @if($forms[$i]->status=='created')
                                 <a class="btn portfolio-btn" href="/lendor-loan-form-view/{{$forms[$i]->id}}">View Loan</a>
+                                @endif
+                                @if($forms[$i]->status=='pending')
+                                <a class="btn portfolio-btn" href="/lendor-request/{{$forms[$i]->id}}">View Loan</a>
+                                @endif
                             </div>
                         </div>
                     </div>

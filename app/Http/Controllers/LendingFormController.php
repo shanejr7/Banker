@@ -85,6 +85,19 @@ class LendingFormController extends Controller
 
     }
 
+     /**
+     * Show the view a borrower form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function borrowerRequest(Request $request,LendingForm $form){
+
+
+        return view('Bnker/html/ltr/borrower-request',['form' => LendingForm::where('id','=',$form->id)->get()]);
+
+    }
+
 
     /**
      * Show the view a lendor form.
@@ -268,6 +281,10 @@ class LendingFormController extends Controller
         if(isset($LendingForm)){
 
          $LendingForm->status = 'pending';
+
+         $LendingForm->user_id = auth()->user()->id;
+
+         $LendingForm->save();
        }
 
 
@@ -278,6 +295,46 @@ class LendingFormController extends Controller
 
    }
 
+
+
+   /**
+     * accept loan.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function borrowerAcceptRequest(Request $request){
+
+        $attributes =  $request->validate([
+
+            'form_id' => 'required',
+            'loan_amount' => '',
+            'interest_rate' => '',
+            'term' => '',
+
+        ]);
+
+
+        $form = $request->input('form_id');
+
+
+        $LendingForm = LendingForm::where('id','=',$form)->first();
+
+
+        if(isset($LendingForm)){
+
+         $LendingForm->status = 'accepted';
+
+         $LendingForm->save();
+       }
+
+
+       $request->session()->regenerate();
+
+
+       return redirect('/borrower-loan-form-view/'.$form)->with('lendor_form_message', 'Form request sent successfully!');
+
+   }
 
 
 
@@ -325,6 +382,20 @@ class LendingFormController extends Controller
         return view('Bnker/html/ltr/lendor-loan-form-view',['form' => LendingForm::where('id','=',$form->id)->get()]);
 
     }
+
+    /**
+     * Show the view a lendor request form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function lendorRequest(Request $request,LendingForm $form){
+
+
+        return view('Bnker/html/ltr/lendor-request',['form' => LendingForm::where('id','=',$form->id)->get()]);
+
+    }
+
 
     /**
      * Show the view a borrower form.
@@ -434,6 +505,10 @@ class LendingFormController extends Controller
         if(isset($LendingForm)){
 
             $LendingForm->status = 'pending';
+
+            $LendingForm->admin_id = auth()->user()->id;
+
+            $LendingForm->save();
 
             
        }

@@ -125,8 +125,8 @@
                                     <li class="nav-item"><a href="/loan-calculations" class="nav-link">Loan
                                     Calculation</a></li>
                                     <li class="nav-item"><a href="/borrower-form" class="nav-link">Loan Form</a></li>
-                                    <li class="nav-item"><a href="/borrower-find-lendor" class="nav-link active">Find a lendor</a></li>
-                                    <!-- <li class="nav-item"><a href="/borrower-request" class="nav-link">Loan Request</a></li> -->
+                                    <li class="nav-item"><a href="/borrower-find-lendor" class="nav-link">Find a lendor</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link active">Loan Request</a></li>
                                         <!-- <li class="nav-item"><a href="open-account.html" class="nav-link">Open Account</a> -->
                                            <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
                                            <!-- <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li> -->
@@ -293,7 +293,7 @@
                         <button class="tran3s apply-button">APPLY FOR LOAN</button>
                         @endif
                         @if($form[0]->status == 'pending')
-                        <button class="tran3s apply-button" disabled>LOAN REQUESTED</button>
+                        <button class="tran3s apply-button" disabled>PENDING LOAN</button>
                         @endif
                         @if($form[0]->status == 'active')
                         <button class="tran3s apply-button" disabled>ACTIVE LOAN</button>
@@ -441,7 +441,7 @@
                                     <form>
 
                                         <div class="message"></div> 
-                                        <input name="email_13" class="getemail" placeholder="Enter email " type="email">
+                                        <input name="email_15" class="getemail" placeholder="Enter email " type="email">
                                     </form>
                                     <button class="btn theme-btn-1 width-100 mt-10 post_subscribe_button"><i
                                         class="lab la-telegram-plane me-2"></i>subscribe</button>
@@ -517,7 +517,7 @@
         <script >
            $(".post_subscribe_button").click(function(event){
               event.preventDefault();
-              let email = $("input[name=email_13]").val();
+              let email = $("input[name=email_15]").val();
               let _token   = $('meta[name="csrf-token"]').attr('content');
 
               $.ajax({

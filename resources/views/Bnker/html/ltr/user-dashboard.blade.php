@@ -246,11 +246,16 @@
     <div class="portfolio-page pt-100 pb-100">
         <!-- Container -->
         <div class="container">
+              @if(session()->has('lendor_form_message'))
+            <div class="alert alert-success">
+                {{ session()->get('lendor_form_message') }}
+            </div>
+       @endif
             <!-- row -->
             <div class="row">
                 <!-- col -->
                 @if(isset($forms) && count($forms)>0)
-                <h1 class="text-center" style="margin-bottom: 2em;">Loan Forms Created</h1>
+                <h1 class="text-center" style="margin-bottom: 2em;">Loan Forms Activity</h1>
                     @for ($i = 0; $i < sizeof($forms); $i++)
                          <div class="col-lg-4 col-md-6 item">
                             <div class="single-portfolio mr-20 mr-sm-0 ">
@@ -278,7 +283,12 @@
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-loan-form-view/{{$forms[$i]->id}}">View Loan</a>
+                                @if($forms[$i]->status=='created')
+                                 <a class="btn portfolio-btn" href="/borrower-loan-form-view/{{$forms[$i]->id}}">View Loan</a>
+                                @endif
+                                @if($forms[$i]->status=='pending')
+                                <a class="btn portfolio-btn" href="/borrower-request/{{$forms[$i]->id}}">View Loan</a>
+                                @endif
                             </div>
                         </div>
                     </div>

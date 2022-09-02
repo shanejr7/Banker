@@ -292,7 +292,7 @@
                         <button class="tran3s apply-button">UPDATE LOAN</button>
                         @endif
                         @if($form[0]->status == 'pending')
-                        <button class="tran3s apply-button">ACCEPT LOAN QUALIFIER</button>
+                        <button class="tran3s apply-button">ACCEPT LOAN</button>
                         @endif
                         @if($form[0]->status == 'active')
                         <button class="tran3s apply-button">ACTIVE LOAN</button>
