@@ -53,9 +53,8 @@ Route::get('/lendor-loan-form-view/{form}',[LendingFormController::class,'lendor
 Route::post('/lendor-form-update',[LendingFormController::class,'lendorFormUpdate'])->name('lendorFormUpdate')->middleware('admin');
 Route::delete('/lendor-form-delete',[LendingFormController::class,'destroy'])->name('lendorFormDelete')->middleware('admin');
 Route::get('/lendor-find-borrower',[LendingFormController::class,'lendorFindBorrower'])->name('lendorFindBorrower')->middleware('admin');
-
-// Route::get('/adminAccount',[PortalController::class,'viewAccount'])->name('adminAccount')->middleware('admin');
-// Route::get('/adminClients',[PortalController::class,'viewClients'])->name('adminClients')->middleware('admin');
+Route::get('/lendor-view-borrower-form/{form}',[LendingFormController::class,'lendorViewBorrowerForm'])->name('lendorViewBorrowerFormPage')->middleware('admin');
+Route::post('/lendor-borrower-form-apply',[LendingFormController::class,'lendorApplyBorrowerFormSubmit'])->name('lendorApplyBorrowerFormPage')->middleware('admin');
 
 
 // USER PAGE <user>
@@ -65,6 +64,8 @@ Route::get('/borrower-loan-form-view/{form}',[LendingFormController::class,'borr
 Route::post('/borrower-form-update',[LendingFormController::class,'borrowerFormUpdate'])->name('borrowerFormUpdate')->middleware('auth');
 Route::delete('/borrower-form-delete',[LendingFormController::class,'destroy'])->name('borrowerFormDelete')->middleware('auth');
 Route::get('/borrower-find-lendor',[LendingFormController::class,'borrowerFindLendor'])->name('borrowerFindLendor')->middleware('auth');
+Route::get('/borrower-view-lendor-form/{form}',[LendingFormController::class,'borrowerViewLendorForm'])->name('borrowerViewLendorFormPage')->middleware('auth');
+Route::post('/borrower-lendor-form-apply',[LendingFormController::class,'borrowerApplyLendorFormSubmit'])->name('borrowerApplyLendorForm')->middleware('auth');
 
 // OTHER PAGE ROUTES
 Route::get('/loan-calculations',[LendingFormController::class,'loanCalculationForm'])->name('loanCalculate');

@@ -73,7 +73,7 @@ class LendingFormController extends Controller
 
 
     /**
-     * Show the view a lendor form.
+     * Show the view a borrower form.
      *
      * @return \Illuminate\Http\Response
      */
@@ -82,6 +82,20 @@ class LendingFormController extends Controller
 
 
         return view('Bnker/html/ltr/borrower-loan-form-view',['form' => LendingForm::where('id','=',$form->id)->get()]);
+
+    }
+
+
+    /**
+     * Show the view a lendor form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function borrowerViewLendorForm(Request $request,LendingForm $form){
+
+
+        return view('Bnker/html/ltr/borrower-view-lendor-form',['form' => LendingForm::where('id','=',$form->id)->get()]);
 
     }
 
@@ -269,6 +283,19 @@ class LendingFormController extends Controller
 
 
         return view('Bnker/html/ltr/lendor-loan-form-view',['form' => LendingForm::where('id','=',$form->id)->get()]);
+
+    }
+
+    /**
+     * Show the view a borrower form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function lendorViewBorrowerForm(Request $request,LendingForm $form){
+
+
+        return view('Bnker/html/ltr/lendor-view-borrower-form',['form' => LendingForm::where('id','=',$form->id)->get()]);
 
     }
 

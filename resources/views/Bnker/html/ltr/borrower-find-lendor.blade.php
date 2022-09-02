@@ -246,14 +246,14 @@
                                 <!-- <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> -->
-                                <a class="btn portfolio-btn" href="/lendor-loan-form-view/{{$forms[$i]->id}}">View Loan</a>
+                                <a class="btn portfolio-btn" href="/borrower-view-lendor-form/{{$forms[$i]->id}}">View Loan</a>
                             </div>
                         </div>
                     </div>
                 </div>
                     @endfor
                 @else
-                  <h1 class="text-center" style="margin-bottom: 2em;">No Borrower Loan Forms found :(</h1>
+                  <h1 class="text-center" style="margin-bottom: 2em;">No Lendor Loan Forms found :(</h1>
                      <div class="col-lg-4 col-md-6 item">
                     <div class="single-portfolio mr-20 mr-sm-0 ">
                         <div class="portfolio-thumb">

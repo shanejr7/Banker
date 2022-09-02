@@ -222,7 +222,7 @@
                             <div class="left-bdr"></div>
                             <div class="right-bdr"></div>
                         </div>
-                        <p>Making a loan form is easy. No upfront cost until a lendor makes a approval.</p>
+                        <p>Making a loan form is easy. Apply for a lendor to approve your loan.</p>
                     </div>
                 </div>
                 <!-- /col -->
